@@ -43,6 +43,10 @@ header {
     text-align: center;
     padding: 15px;
     box-shadow: 1px 1px 1px grey;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .split-topic {
@@ -56,6 +60,16 @@ header {
     border: thin solid;
     box-shadow: 4px 4px 0px grey;
     margin-top: 10vh;
+}
+
+.split-item-right ul {
+    margin-bottom: 65px;
+    padding: 15px;
+}
+
+.split-item-right h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
 .split-item-left {
@@ -110,9 +124,49 @@ header {
         border-bottom: thick solid;
     }
 
-    .split-item-right h1 {
-        margin-top: 60px;
-    }
+
     
 
 }
+
+
+@media screen and (prefers-color-scheme: light) {
+    
+    .split-item-right ul:hover {
+        
+        border-radius: 10px;
+        background-color: rgb(151, 151, 151);
+    }
+
+    .split-item-left img {
+        box-shadow: 2px 2px 2px rgb(151, 151, 151);
+    }
+
+    header {
+        background-color: white;
+    }
+
+
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+    
+    .split-item-right ul:hover {
+        
+        border-radius: 10px;
+        background-color: rgb(49, 49, 49);
+    }
+
+    .split-item-left img {
+        box-shadow: 2px 2px 2px rgb(49,49,49);
+    }
+
+    header {
+        background-color: rgb(0, 0, 0);
+    }
+
+
+}
+
+
